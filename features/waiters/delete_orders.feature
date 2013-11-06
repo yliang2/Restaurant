@@ -21,5 +21,9 @@ senario: Try to edit an order
 senario: Try to delete an order
   given I am on the "Edit Order Detail" page
   then I should see "Ordered Menu" list, "Delete", "Back"
+  when I press "Delete"
+  then I should see "order deleted" page
+  when I press "Back"
+  then I should on "Order Information" page
   when I press "Back"
   then I should be on the "Order Information" page
