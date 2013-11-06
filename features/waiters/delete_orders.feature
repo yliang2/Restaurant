@@ -18,12 +18,19 @@ senario: Try to edit an order
   when I press "Back"
   then I should be on the "Order Management" home page
   
-senario: Try to delete an order
+senario: Try to delete an order (successful)
   given I am on the "Edit Order Detail" page
   then I should see "Ordered Menu" list, "Delete", "Back"
   when I press "Delete"
   then I should see "order deleted" page
   when I press "Back"
-  then I should on "Order Information" page
-  when I press "Back"
   then I should be on the "Order Information" page
+  
+  senario: Try to delete an order (failure)
+  given I am on the "Edit Order Detail" page
+  then I should see "Ordered Menu" list, "Delete", "Back"
+  when I press "Delete"
+  then I should be on "order deleted" page
+  and I should see "fail to delete order"
+  when I press "Back to Edit"
+  then I should be on the "Edit Order Detail" page
