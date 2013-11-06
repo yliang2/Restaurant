@@ -37,7 +37,7 @@ senario: Try Add menus into an order (failure added)
   when I drag a menu from "Ordered List" to "Menu List"
   then the menu should not be in "Ordered List"
   when I press "Save"
-  then I should be should not on "Order Information" page
+  then I should not on "Order Information" page
   and I shoud be on "Fail to Add New Order" page
   and I should see "Reason(s) of failure"
   when I press "Back to Edit"
