@@ -6,7 +6,7 @@ Feature: Add new order
 senario: Try to Add an new order
   given I am on the "Order Information" page
   and I should see "Order List","Show Detail","Add New","Edit","Back"
-  and "Show Detail", "Add New", "Edit" is disable
+  and "Show Detail", "Edit" is disable
   and orders in the "Order List" is sorted by time and status
   when I press "Add New"
   then I should be on the "New Order" page
