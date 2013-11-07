@@ -30,7 +30,7 @@ senario: Try to delete an order (successful)
   given I am on the "Edit Order Detail" page
   then I should see "Ordered Menu" list, "Delete", "Back"
   when I press "Delete"
-  then I should be on "order deleted" page
+  then I should not be on "order deleted" page
   and I should see "fail to delete order"
   when I press "Back to Edit"
   then I should be on the "Edit Order Detail" page
