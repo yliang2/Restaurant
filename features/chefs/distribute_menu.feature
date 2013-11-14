@@ -1,4 +1,4 @@
-feature: distribute menu manually
+Feature: distribute menu manually
   As a chef
-  So I can distribute menu to different other chefs manually
-  I want to store menu information for different chefs
+  So I can distribute menu to different other chefs
+  I want to store menu information

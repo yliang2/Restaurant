@@ -1,4 +1,4 @@
-feature: check orders
+Feature: check orders
 	As a chef
-	So I can check order information
+	So I can create the correct dish
 	I want to retrieve order information

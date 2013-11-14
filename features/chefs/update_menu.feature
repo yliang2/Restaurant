@@ -1,4 +1,4 @@
-feature: update menu
+Feature: update menu
   As a chef
-  So I can update a menu's status
-  I want to update menu
+  So the customers can see what we are serving
+  I want to update the menu

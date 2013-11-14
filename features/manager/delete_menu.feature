@@ -1,4 +1,4 @@
-feature: delete menu
+Feature: delete menu
   As a manager
-  So I can delete menu information
-  I wan to remove menu
+  So that chefs are not confused by old data
+  I want to remove menu
