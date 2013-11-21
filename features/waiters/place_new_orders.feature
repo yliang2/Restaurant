@@ -6,14 +6,18 @@ Feature: Add new order
 # please start each step with a capital letter
 
   Scenario: Try to Add an new order
-    given I am on the "Order Information" page
-    and I should see "Order List","Show Detail","Add New","Edit","Back"
-    and "Show Detail", "Edit" is disable
-    and orders in the "Order List" is sorted by time and status
-    when I press "Add New"
-    then I should be on the "New Order" page
-    when I press "Back"
-    then I should be on the "Order Management" home page
+    Given I am on the "Order Information" page
+    And I should see "Order List"
+    And I should see "Show Detail"
+    And I should see "Add New"
+    And I should see "Edit"
+    And I should see "Back"
+    And "Show Detail", "Edit" is disabled
+    And orders in the "Order List" is sorted by time and status
+    When I press "Add New"
+    Then I should be on the "New Order" page
+    When I press "Back"
+    Then I should be on the "Order Management" home page
 
   Scenario: Try Add menus into an order (successful added)
     given I am on the "New Order" page
