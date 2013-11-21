@@ -11,21 +11,24 @@ When(/^I click on "(.*?)"$/) do |link|
   click_link link
 end
 
+# seems like I need to write specific sets of steps for each student as an example ...
+# it would be nice to follow that with a simple client only data storage option ...
+
 Given(/^the following contact exists:$/) do |table|
   # table is a Cucumber::Ast::Table
   #pending # this would be written into the database if we were testing with one
 end
 
-When(/^I go to the Users Page$/) do                               §
-visit 'users.html'
+When(/^I go to the Users Page$/) do
+  visit 'users.html'
 end
 
 When(/^I fill in "(.*?)" with "(.*?)"$/) do |name, value|
   fill_in(name, :with => value)
 end
 
-When(/^I press "(.*?)"$/) do |link|
-  click_button link
+When(/^I press "(.*?)"$/) do |button|
+  click_button button
 end
 
 Then(/^I change "(.*?)" with "(.*?)"$/) do |arg1, arg2|
