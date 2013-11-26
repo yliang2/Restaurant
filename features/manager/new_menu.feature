@@ -1,4 +1,4 @@
-feature: create new menu
+Feature: create new menu
   As a manager
-  So I can add new menus
-  I want to store menus
+  So I can have a variety of menus for the customers
+  I want to store new menus
