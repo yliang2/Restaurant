@@ -1,0 +1,20 @@
+<html>
+<head></head>
+<body><h1>Update Order</h1>
+<p>Update Menu</p>
+<form id='add' action="" method="get">
+    <input type="text" name="Add Menu">
+    <input id="Save" type="submit" value="Save" >
+    <input id="Back" type="submit" value="Back">
+    <input id="Back to Edit" type="submit" value="Back to Edit">
+</form>
+<ol>
+  <li>Ordered Menu</li>
+  <li>Order Updated</li>
+  <li>Order Deleted</li>
+  <li>Fail to Delete Order 12</li>
+  <li>Order fail to Update</li>
+</ol>
+</body>
+</html>
+

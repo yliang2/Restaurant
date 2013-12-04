@@ -45,5 +45,5 @@ Feature: update orders
     And I should see button "Back"
     When I press "Save"
     Then I should see "Order fail to Update" 
-    When I press "Back to Edit"
+    When I press "Back_to_Edit"
     Then I should be on the "Edit Order Detail" page

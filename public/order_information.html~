@@ -10,7 +10,6 @@
     <input id="Edit" type="submit" value="Edit" disabled>
     <input id="Back" type="submit" value="Back">
 </form>
-<p>Order 12 is selected</p>
 </body>
 </html>
 

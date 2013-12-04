@@ -21,7 +21,7 @@ Feature: check order information
     Then I should be on the "Order Information Editable" page
     And "Show Detail" is enable
     And "Edit" is disabled
-    When I press "Show Detail"
+    When I press "Show_Detail"
     Then I should be on the "Order Detail" page
     When I press "Back"
     Then I should be on the "Order Management" page

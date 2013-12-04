@@ -6,33 +6,44 @@ Feature: delete orders
 # please start each step with a capital letter
 
   Scenario: Try to edit an order
-    given I am on the "Order Management" home page
-    then I should see "Orders"
-    when I press "Orders"
-    then I should be on the "Order Information" page
-    and I should see "Order List","Show Detail","Add New","Edit","Back"
-    and "Show Detail", "Add New", "Edit" is disabled
-    and orders in the "Order List" is sorted by time and status
-    when one order in "Order List" is selected
-    then "Show Detail", "Edit" is enable
-    when I press "Edit"
-    then I should be on the "Edit Order Detail" page
-    when I press "Back"
-    then I should be on the "Order Management" home page
+    Given I am on the "Order Management" page
+    And I should see button "Orders"
+    When I press "Orders"
+    Then I should be on the "Order Information" page
+    And I should see "Order List"
+    And I should see button "Show Detail"
+    And I should see button "Add New"
+    And I should see button "Edit"
+    And I should see button "Back"
+    And "Show Detail" is disabled
+    And "Add New" is disabled
+    And "Edit" is disabled
+    #And orders in the "Order List" is sorted by time and status
+    When I see "Order 12 is selected"
+    Then I should be on the "Order Information Editable" page
+    And "Show Detail" is enable
+    And "Edit" is enable
+    When I press "Edit"
+    Then I should be on the "Edit Order Detail" page
+    When I press "Back"
+    Then I should be on the "Order Management" page
 
   Scenario: Try to delete an order (successful)
-    given I am on the "Edit Order Detail" page
-    then I should see "Ordered Menu" list, "Delete", "Back"
-    when I press "Delete"
-    then I should see "order deleted" page
-    when I press "Back"
-    then I should be on the "Order Information" page
+   Given I am on the "Edit Order Detail" page
+    And I should see "Ordered Menu"
+    And I should see button "Delete"
+    And I should see button "Back"
+    When I press "Delete"
+    Then I should see "Order Deleted" 
+    When I press "Back"
+    Then I should be on the "Order Information" page
 
   Scenario: Try to delete an order (failure)
-    given I am on the "Edit Order Detail" page
-    then I should see "Ordered Menu" list, "Delete", "Back"
-    when I press "Delete"
-    then I should not be on "order deleted" page
-    and I should see "fail to delete order"
-    when I press "Back to Edit"
-    then I should be on the "Edit Order Detail" page
+    Given I am on the "Edit Order Detail" page
+    And I should see "Ordered Menu"
+    And I should see button "Delete"
+    And I should see button "Back"
+    When I press "Delete"
+    Then I should see "Fail to Delete Order 12" 
+    When I press "Back to Edit"
+    Then I should be on the "Edit Order Detail" page

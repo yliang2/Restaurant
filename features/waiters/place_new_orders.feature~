@@ -37,16 +37,16 @@ Feature: Add new order
 
   Scenario: Try Add menus into an order (failure added)
     Given I am on the "New Order" page
-    #And I should see "Menu List" list
-    #And I should see "Menu List" list is empty
-    And I should see "Add Menu" 
-    And I should see button "Save"
-    And I should see button "Back"
-    And "Save" is disabled 
-    #When I drag a menu "Cool cucumber" from "Menu List" to "Ordered List"
-    When I fill in "Add Menu" with "Cool Cucumber"
-    And I press "Save"
-    Then I should see "Failure to add an order" 
-    When I press "Back"
-    Then I should be on the "Order Information" page
-
+    Then I should see "Menu List", "Ordered List", "Save", "Back"
+    And "Save" is disable if "Menu List" is empty
+    When I drag a menu from "Menu List" to "Ordered List"
+    Then the menu should be in "Ordered List"
+    And  the menu "quantity" in "Ordered List" should be increased by 1
+    When I drag a menu from "Ordered List" to "Menu List"
+    Then the menu should not be in "Ordered List"
+    When I press "Save"
+    Then I should not on "Order Information" page
+    And I shoud be on "Fail to Add New Order" page
+    And I should see "Reason(s) of failure"
+    Then I press "Back to Edit"
+    Then I should be on "New Order" page

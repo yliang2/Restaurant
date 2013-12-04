@@ -1,0 +1,16 @@
+<html>
+<head></head>
+<body><h1>New Order</h1>
+<p>Add Menu</p>
+<form id='add' action="" method="get">
+    <input type="text" name="Add Menu">
+    <input id="Save" type="submit" value="Save" disabled>
+    <input id="Back" type="submit" value="Back">
+</form>
+<ol>
+  <li>Order added successfully</li>
+  <li>Failure to add an order</li>
+</ol>
+</body>
+</html>
+

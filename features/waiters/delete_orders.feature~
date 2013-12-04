@@ -1,16 +1,16 @@
-Feature: update orders
-  As a waiters
-  So I can make sure that customers get the dishes they want
-  I want to update an existing order
+Feature: delete orders
+  As a waiter
+  So I can indicate an order has been served
+  I want to remove that order from the current list?
 
-  # please start each step with a capital letter
+# please start each step with a capital letter
 
   Scenario: Try to edit an order
     Given I am on the "Order Management" page
     And I should see button "Orders"
     When I press "Orders"
     Then I should be on the "Order Information" page
-    And I should see "Order List"
+    And I should see  "Order List"
     And I should see button "Show Detail"
     And I should see button "Add New"
     And I should see button "Edit"
@@ -28,22 +28,22 @@ Feature: update orders
     When I press "Back"
     Then I should be on the "Order Management" page
 
-  Scenario: Try to update an order (successful)
-    Given I am on the "Edit Order Detail" page
+  Scenario: Try to delete an order (successful)
+   Given I am on the "Edit Order Detail" page
     And I should see "Ordered Menu"
-    And I should see button "Save"
+    And I should see button "Delete"
     And I should see button "Back"
-    When I press "Save"
-    Then I should see "Order Updated" 
+    When I press "Delete"
+    Then I should see "Order Deleted" 
     When I press "Back"
     Then I should be on the "Order Information" page
 
-  Scenario: Try to update an order (failure)
+  Scenario: Try to delete an order (failure)
     Given I am on the "Edit Order Detail" page
     And I should see "Ordered Menu"
-    And I should see button "Save"
+    And I should see button "Delete"
     And I should see button "Back"
-    When I press "Save"
-    Then I should see "Order fail to Update" 
+    When I press "Delete"
+    Then I should see "Fail to Delete Order 12" 
     When I press "Back to Edit"
     Then I should be on the "Edit Order Detail" page

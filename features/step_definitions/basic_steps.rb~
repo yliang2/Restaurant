@@ -38,7 +38,7 @@ When(/^I see "(.*?)"$/) do |content|
 end
 
 And(/^"(.*?)" is enable$/) do |button1|
-  find("input#"+button1.gsub(/ /,'_'))[:enabled].should be_true
+  find("input#"+button1.gsub(/ /,'_'))[:disabled].should be_false
 end
 
 
