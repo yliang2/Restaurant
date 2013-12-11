@@ -1,6 +1,6 @@
 Feature: Add new order
   As a waiter
-  so I can ensure customers receive the correct dishs
+  so I can ensure customers receive the correct dishes
   I want to store a new order
 
 # please start each step with a capital letter
